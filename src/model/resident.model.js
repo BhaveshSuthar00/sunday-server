@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+
 const residentSchema = new mongoose.Schema({
         userId: { type: mongoose.Schema.Types.ObjectId, ref:"user",required:true}, 
         gender : {type : String, default : "male", reqrired : true},
