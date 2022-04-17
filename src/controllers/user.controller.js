@@ -28,7 +28,7 @@ router.get('/all', async (req, res) => {
     }
 })
 
-router.get("/login",async(req,res)=>{
+router.post("/login",async(req,res)=>{
     try{
         const user = await User.findOne({ email: req.body.email });
         const match = user.checkPassword(req.body.password);
