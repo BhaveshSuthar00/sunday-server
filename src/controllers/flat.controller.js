@@ -28,6 +28,30 @@ router.get('/all', async (req, res) => {
     return res.status(400).send(err.message);
   }
 })
+router.get('/block/:id', async (req, res) => {
+  try {
+    const userPlaylist = await Flat.find({block : req.params.id}).lean().exec();
+    return res.status(200).send(userPlaylist);
+  } catch (err) {
+    return res.status(400).send(err.message);
+  }
+})
+router.get('/sort', async(req, res)=>{
+  try {
+    let query = req.query.sortby;
+    console.log(query)
+    let data;
+    if(query === 'asc'){
+      data = await Flat.find({}).sort({flatNo : 1}).lean().exec();
+    } else {
+      data = await Flat.find({}).sort({flatNo : -1}).lean().exec();
+    }
+    return res.status(200).send(data);
+  }
+  catch(err) {
+    return res.status(400).send(err.message);
+  }
+})
 router.get("/:id", async (req, res) => {
   try {
     const userPlaylist = await Flat.findById(req.params.id).lean().exec();
