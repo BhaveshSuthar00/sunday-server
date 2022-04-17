@@ -5,8 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+            width: 100%;
+            display : flex;
+            flex-direction: column;
+            font-size : 21px;
+        }
+        a {
+            /* border-bottom : 1px solid black; */
+            margin : 1% 0;
+            padding : 1% 0;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        
     <h1>this is landing page</h1>
+    <div>
+        <h1>All routes are : </h1>
+
+        <p>post request</p><a href="https://sunday-server.herokuapp.com/user/post">/user/post</a>
+        <br>
+        <p>get all user</p><a href="https://sunday-server.herokuapp.com/user/all">/user/all</a>
+        <br>
+        
+        <p>get for login</p><a href="https://sunday-server.herokuapp.com/user/:id">/user/login</a>
+        <br>
+        <p>patch</p><a href="https://sunday-server.herokuapp.com/user/:id">/user/:id</a>
+        <br>
+        
+        <p>post request </p><a href="https://sunday-server.herokuapp.com/resident/post">/resident/post</a>
+        <br>
+        <p>get all resident</p><a href="https://sunday-server.herokuapp.com/resident/all">/resident/all</a>
+        <br>
+        <p>get resident by flat id </p><a href="https://sunday-server.herokuapp.com/resident/:id">/resident/:id</a>
+        <br>
+        <p>patch resident by id </p><a href="https://sunday-server.herokuapp.com/resident/:id">/resident/:id</a>
+        <br>
+        
+        <p>post request</p> <a href="https://sunday-server.herokuapp.com/flat/post">/flat/post</a>
+        <br>
+        <p>get all flat </p><a href="https://sunday-server.herokuapp.com/flat/all">/flat/all</a>
+        <br>
+        <p>patch flat by id</p> <a href="https://sunday-server.herokuapp.com/flat/:id">/flat/:id</a>
+        <br>
+        <p>get flat by id</p> <a href="https://sunday-server.herokuapp.com/flat/:id">/flat/:id</a>
+    </div>
+    </div>
 </body>
 </html>
