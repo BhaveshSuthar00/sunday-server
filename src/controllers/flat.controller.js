@@ -39,7 +39,6 @@ router.get('/block/:id', async (req, res) => {
 router.get('/sort', async(req, res)=>{
   try {
     let query = req.query.sortby;
-    console.log(query)
     let data;
     if(query === 'asc'){
       data = await Flat.find({}).sort({flatNo : 1}).lean().exec();
